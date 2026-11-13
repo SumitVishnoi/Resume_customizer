@@ -1,6 +1,10 @@
-import React from 'react'
+import { initializedSocketConnection } from '../services/chat.socket'
+import { useEffect } from 'react'
 
 const Dashboard = () => {
+   useEffect(()=> {
+        initializedSocketConnection()
+    }, [])
   return (
     <div>
       dashboard
